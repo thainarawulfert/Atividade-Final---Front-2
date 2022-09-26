@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/home.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <title>Home</title>
+</head>
+
+<body class="container-fluid">
+    <div class="row shadow-bottom">
+        <div class="col">
+            <header class="d-flex justify-content-between pt-3">
+                <button type="button" class="btn " id="btnSair">
+                    logout
+                </button>
+            </header>
+        </div>
+    </div>
+    <h1 class="display-5" style="text-align: center; font-family: 'Courier New', Courier, monospace;">Olá, seja bem-vindo a sua página de recados!</h1>
+    <div class="alert " role="alert" style="display: none;">
+
+    </div>
+    <div class="inputs">
+        <form id="formulario" action="" class="row g-3">
+            <div class="col-sm">
+                <input id="descricao" requiredtype="text" class="form-control" placeholder="Descrição" aria-label="First name">
+            </div>
+            <div class="col-sm-7">
+                <input id="detalhamento" required type="text" class="form-control" placeholder="Detalhamento">
+            </div>
+            <div class="col-sm">
+                <button id="btnGravar" class="btn ">Gravar Recado</button>
+            </div>
+
+        </form>
+    </div>
+    <hr>
+    <div class="divTable ">
+        <table class="table table-striped text-center">
+            <tr>
+                <th>ID</th>
+                <th>Recado</th>
+                <th>Descrição</th>
+                <th>Ação</th>
+            </tr>
+            <tbody id="table" >
+            <!-- <tr>
+                <td>120210</td>
+                <td>recados de teste</td>
+                <td>recados de testes para teste</td>
+                <td class="d-flex flex-row justify-content-center ">
+                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#modalApagar">
+                            apagar
+                    </button>
+                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#modalEditar">
+                            editar
+                    </button>
+
+                </td>
+            </tr> -->
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#modalApagar">
+        apagar
+    </button>
+
+    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#modalEditar">
+        editar
+    </button> -->
+
+    <!-- Modal Apagar -->
+    <div class="modal fade" id="modalApagar" tabindex="-1" aria-labelledby="modalApagarLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalApagarLabel">Apagar recado?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Tem certeza que quer apagar?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn"data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn " id="btnapagar" data-bs-dismiss="modal"
+                        id="confirm-delete">Apagar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Editar -->
+    <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEditarLabel">Editar recado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <!-- <div class="col">
+                            <input id="modalRecado" type="text" class="form-control" placeholder="Recado"
+                                aria-label="First name">
+                        </div>
+                        <div class="col">
+                            <input id="modalDescricao" type="text" class="form-control" placeholder="Descrição"
+                                aria-label="Last name">
+                        </div> --> <p>Tem certeza que quer editar?</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" id="btneditar" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn" data-bs-dismiss="modal"
+                        id="confirm-save">Editar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="./public/dist/home.js"></script>
+</body>
+
+</html>
